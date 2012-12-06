@@ -11,12 +11,14 @@
 #import "Dec6ViewController.h"
 
 @implementation Dec6AppDelegate
+@synthesize window = _window;
+@synthesize viewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[Dec6ViewController alloc] initWithNibName:@"Dec6ViewController" bundle:nil];
+    self.viewController = [[Dec6ViewController alloc] initWithNibName:nil bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
